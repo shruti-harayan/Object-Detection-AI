@@ -19,3 +19,13 @@ Explanation
 4) Entry Time Calculation: The entry time of the first detected person and dog are recorded.
 5) CSV Output: The detected entry time is saved in a CSV file.
 This code should detect the entry time of the man as well as the dog in the provided video and save the result to a CSV file.
+
+Here's a brief overview of the key steps:
+1) Model Loading: You load the MobileNet SSD model using the cv2.dnn.readNetFromCaffe function.
+2) Class Labels: You define the class labels that the MobileNet SSD model is trained to detect.
+3) Video Capture: You load the video using cv2.VideoCapture.
+4) Object Detection Loop: The loop reads each frame, processes it to detect objects, and checks if a person or dog appears in the frame.
+5) Non-Maximum Suppression: You apply Non-Maximum Suppression (NMS) to reduce overlapping bounding boxes for the same object.
+6) Entry Time Calculation: You calculate and store the entry time for the detected objects.
+7) Visualization: Detected objects are highlighted with bounding boxes and labeled.
+8) CSV Writing: The entry times for the detected objects are written to a CSV file.
